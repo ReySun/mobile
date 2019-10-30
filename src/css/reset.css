@@ -1,10 +1,40 @@
-body {
-  font-size: 14px;
-  font-family: -apple-system,Helvetica,sans-serif;
+html {
+  font-size: 20px;
+  font-size: 5.33333vw;
+  height: 100%;
 }
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 57.6px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+
+body {
+  font-family: -apple-system, Helvetica, sans-serif;
+}
+
 ul,
 ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+* {
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+ima,
+a {
+  -webkit-touch-callout: none;
 }

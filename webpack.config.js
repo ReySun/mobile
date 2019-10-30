@@ -7,7 +7,11 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[chunkhash:5].js'
@@ -32,7 +36,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|dpg|webp)$/,
         use: [{
           loader: 'file-loader',
           options: {
@@ -51,6 +55,10 @@ module.exports = {
             minimize: true
           }
         }
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader'
       }
     ]
   },
@@ -62,7 +70,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash:5].css',
     }),
-    new OptimizeCSSAssetsPlugin({})
+    // new OptimizeCSSAssetsPlugin({})
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
