@@ -37,11 +37,12 @@ input {
 ima,
 a {
   -webkit-touch-callout: none;
-}
-
-a {
   text-decoration: none;
 }
+a img {
+  outline: none;
+}
+
 a.block {
   display: block;
   width: 100%;
