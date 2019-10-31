@@ -11,7 +11,13 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
-  entry: './src/index.ts',
+  entry: {
+    home: "./src/home/index.ts",
+    list: "./src/list/index.ts",
+    webportal: "./src/webportal/index.ts",
+    cart: "./src/cart/index.ts",
+    login: "./src/login/index.ts"
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[chunkhash:5].js'
@@ -65,10 +71,37 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template:'./src/home/index.html',
+      filename:'index.html',
+      hash:true,
+      chunks:['home']
+    }),
+    new HtmlWebpackPlugin({
+      template:'./src/list/index.html',
+      filename:'list.html',
+      hash:true,
+      chunks:['list']
+    }),
+    new HtmlWebpackPlugin({
+      template:'./src/webportal/index.html',
+      filename:'webportal.html',
+      hash:true,
+      chunks:['webportal']
+    }),
+    new HtmlWebpackPlugin({
+      template:'./src/cart/index.html',
+      filename:'cart.html',
+      hash:true,
+      chunks:['cart']
+    }),
+    new HtmlWebpackPlugin({
+      template:'./src/login/index.html',
+      filename:'login.html',
+      hash:true,
+      chunks:['login']
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[chunkhash:5].css',
+      filename: '[name].[chunkhash:5].css',
     }),
     new OptimizeCSSAssetsPlugin({})
   ],

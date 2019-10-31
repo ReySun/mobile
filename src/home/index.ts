@@ -1,8 +1,8 @@
 import "normalize.css";
-import "./css/reset.css";
-import "./css/index.less";
+import "../assets/css/reset.css";
+import "../assets/css/index.less";
 
-import { $dom } from "./js/util/dom";
+import { $dom } from "../util/dom";
 
 const headerElement = $dom("#header");
 const openInAppElement = $dom("#open-in-app");
