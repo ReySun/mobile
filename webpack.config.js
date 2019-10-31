@@ -70,7 +70,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash:5].css',
     }),
-    // new OptimizeCSSAssetsPlugin({})
+    new OptimizeCSSAssetsPlugin({})
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
