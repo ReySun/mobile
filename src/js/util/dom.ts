@@ -4,9 +4,9 @@ class $DOM {
   private listeners: any = new Map();
   constructor() {}
   css(object: object): $DOM;
-  css(property: string): $DOM;
+  css(property: string): string;
   css(property: string, value: string): $DOM;
-  css(arg1: string | object | any, arg2?: string): $DOM {
+  css(arg1: string | object | any, arg2?: string): $DOM | string {
     const elements = Array.prototype.slice.call(this);
     if (!elements.length) {
       return this;
