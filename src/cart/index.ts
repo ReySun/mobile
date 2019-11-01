@@ -1,4 +1,3 @@
-import "normalize.css";
-import "../assets/css/reset.css";
+import "../assets/style/cart/index.less";
 
 console.log('购物车');

@@ -1,4 +1,3 @@
-import "normalize.css";
-import "../assets/css/reset.css";
+import "../assets/style/list/index.less";
 
 console.log('分类');

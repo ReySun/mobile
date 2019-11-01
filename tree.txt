@@ -1,0 +1,20 @@
+|____src
+| |____util               # 工具ts文件夹
+| |____components         # 公共html，类似于组件化
+| |____common             # 公共ts，如引入公共less，浏览器补丁文件等
+| |____home               # 页面1，包含html和ts
+| |____list               # 页面2，包含html和ts
+| |____webportal          # 页面3，包含html和ts
+| |____cart               # 页面4，包含html和ts
+| |____login              # 页面5，包含html和ts
+| |____assets             # 静态文件夹，包含样式、图片以及字体
+| | |____images
+| | |____fonts
+| | |____style
+| | | |____home            # 页面1的less
+| | | |____common          # 公共less，供其他页面引入
+| | | |____list            # 页面2的less
+| | | |____webportal       # 页面3的less
+| | | |____cart            # 页面4的less
+| | | |____login           # 页面5的less
+| |____config.routes.js    # 路由配置

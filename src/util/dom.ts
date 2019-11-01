@@ -1,4 +1,4 @@
-import { isType } from "./simple";
+import { isType } from "./util";
 
 class $DOM {
   private listeners: any = new Map();

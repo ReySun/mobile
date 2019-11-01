@@ -1,7 +1,4 @@
-import "normalize.css";
-import "../assets/css/reset.css";
-import "../assets/css/index.less";
-
+import "../assets/style/home/index.less";
 import { $dom } from "../util/dom";
 
 const headerElement = $dom("#header");

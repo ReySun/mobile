@@ -1,4 +1,3 @@
-import "normalize.css";
-import "../assets/css/reset.css";
+import "../assets/style/login/index.less";
 
 console.log('登录');
